@@ -4,13 +4,14 @@ import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
+import com.lemoncog.WellHung.LemoncogGame;
+import com.lemoncog.WellHung.menu.HangTimerScreen;
 import com.lemoncog.engine.factory.UIFactory;
 import com.lemoncog.engine.resource.Assets;
-import com.lemoncog.WellHung.LemoncogGame;
 
 public class MainScreen extends BaseScreen
 {
-	private static final String MODE_1 = "Target";
+	private static final String MODE_1 = "Hanging";
 	public static final int MENU_PADDING = (int) (20 * Assets.DIMENSIONS_SCALE_MOD);
 
 	public MainScreen()
@@ -26,7 +27,7 @@ public class MainScreen extends BaseScreen
 			@Override
 			public void clicked(InputEvent event, float x, float y)
 			{
-				//LemoncogGame.getGame().pushScreen(new GameScreen());
+				LemoncogGame.getGame().pushScreen(new HangTimerScreen());
 			}
 		});
 
