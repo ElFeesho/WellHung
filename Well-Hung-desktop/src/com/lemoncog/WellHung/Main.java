@@ -11,6 +11,6 @@ public class Main {
 		cfg.width = 480;
 		cfg.height = 320;
 		
-		new LwjglApplication(new WellHung(), cfg);
+		new LwjglApplication(new LemoncogGame(null), cfg);
 	}
 }
